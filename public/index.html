@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <title>Hoje é Super Sexta?</title>
+
+        <link href='http://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+
+        <style>
+            body { 
+                font-family: 'Raleway', sans-serif;
+                text-transform: uppercase;
+            }
+
+            ::-moz-selection { background: #3498db; color: #fff; text-shadow: none; }
+            ::selection { background: #3498db; color: #fff; text-shadow: none; }
+
+            h1, h2 {
+                margin: 0;
+                text-align: center;
+                letter-spacing: -0.05em;
+            }
+
+            .container {
+                margin-top: 25%;
+            }
+
+            h1 {
+                font-size: 6em;
+                color: #444;
+                line-height: 1em;
+            }
+
+            h2 {
+                color: #d4d4d4;
+                font-size: 1.5em;
+            }
+
+            @media only screen and (min-width : 35em) {
+                .container {
+                    margin-top: 20%;
+                }
+
+                h1 {
+                    font-size: 10em;
+                }
+
+                h2 {
+                    font-size: 3em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>SUPER SEXTA!!!</h1>
+            <h2>Será sempre a subir</h2>
+        </div>
+
+    </body> 
+
+    <script>
+        var elH1 = document.getElementsByTagName('h1')[0];
+        var elH2 = document.getElementsByTagName('h2')[0];
+        var day = new Date();
+        var daysLeft;
+            
+        day = day.getDay();
+
+        if(day === 5) {
+            elH1.innerHTML = 'Hoje é SUPER SEXTA!!!';   
+            elH2.innerHTML = '';
+        }
+        else {
+            daysLeft = 5 - day;
+            if(daysLeft === -1) {
+                daysLeft = 6;
+            }
+            elH1.innerHTML = 'Não...';
+            elH2.innerHTML = 'mas já só faltam ' + daysLeft + ' dias';
+        }
+    </script>
+</html>
