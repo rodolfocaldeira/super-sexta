@@ -10,7 +10,6 @@ set :copy_exclude, [
 	"config", 
 	"design", 
 	"node_modules", 
-	"public",
 	".gitignore", 	
 	".git", 	
 	"Capfile",	
