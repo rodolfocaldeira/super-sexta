@@ -44,3 +44,5 @@ EOF
     put htaccess, "#{current_release}/public/.htaccess"
     run "chmod 755 #{current_release}/public/.htaccess"
 end
+
+
